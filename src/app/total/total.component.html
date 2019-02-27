@@ -1,0 +1,11 @@
+<div class="priceContainer">
+  <div class="totalPrice">
+   <select [(ngModel)]='currencyCode'>
+     <option value='USD'>USD</option>
+     <option value='MXN'>MXN</option>
+     <option value='AUD'>AUD</option>
+   </select>
+   <br />
+   Total: <span class="priceCurrency">{{ this.burger.Price | currency:currencyCode }}</span>
+  </div>
+</div>

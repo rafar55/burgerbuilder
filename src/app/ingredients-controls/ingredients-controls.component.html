@@ -1,0 +1,6 @@
+<div class="controls">
+  <button class="btn-add" [class.btn-remove]='burger.HasMeat' (click)='AddIngredient(Ingredients.Meat)'>{{burger.HasMeat ? 'Remove' : 'Add'}} Meat</button>
+  <button class="btn-add" [class.btn-remove]='burger.HasCheese' (click)='AddIngredient(Ingredients.Cheese)'>{{burger.HasCheese ? 'Remove' : 'Add'}} Cheese</button>
+  <button class="btn-add" [class.btn-remove]='burger.HasSalad' (click)='AddIngredient(Ingredients.Salad)'>{{burger.HasSalad ? 'Remove' : 'Add'}} Salad</button>
+</div>
+

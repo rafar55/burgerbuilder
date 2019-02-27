@@ -1,0 +1,30 @@
+.controls {
+    text-align: center;
+}
+
+button:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn-add {
+    margin: 5px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff;
+    background-color: #536DFE;
+    box-shadow: 0px 1px 1px #1A237E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-remove {
+    background-color: #FF5252;
+    box-shadow: 0px 1px 1px #B71C1C;
+}
