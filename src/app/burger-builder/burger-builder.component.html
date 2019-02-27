@@ -1,4 +1,6 @@
 <burger [burger]='burger'></burger>
-<total [burger]='burger'></total>
-<ingredients-controls [burger]='burger' (ingredientAdded)='AddIngredient($event)' 
-(ingredientRemoved)='RemoveIngredient($event)'></ingredients-controls>
+<app-total [burger]='burger'></app-total>
+<ingredients-controls
+  [burger]='burger'
+  (ingredientAdded)='AddIngredient($event)'
+  (ingredientRemoved)='RemoveIngredient($event)'></ingredients-controls>

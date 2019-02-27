@@ -9,6 +9,7 @@ import { IngredientsControlsComponent } from './ingredients-controls/ingredients
 import { TotalComponent } from './total/total.component';
 import { BurgerComponent } from './burger/burger.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     IngredientsControlsComponent,
     TotalComponent,
     BurgerComponent,
-    IngredientComponent
+    IngredientComponent,
+    OrderDetailComponent
   ],
   imports: [
     BrowserModule,
