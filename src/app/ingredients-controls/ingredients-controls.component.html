@@ -1,6 +1,8 @@
-<div class="controls">
-  <button class="btn-add" [class.btn-remove]='burger.HasMeat' (click)='AddIngredient(Ingredients.Meat)'>{{burger.HasMeat ? 'Remove' : 'Add'}} Meat</button>
-  <button class="btn-add" [class.btn-remove]='burger.HasCheese' (click)='AddIngredient(Ingredients.Cheese)'>{{burger.HasCheese ? 'Remove' : 'Add'}} Cheese</button>
-  <button class="btn-add" [class.btn-remove]='burger.HasSalad' (click)='AddIngredient(Ingredients.Salad)'>{{burger.HasSalad ? 'Remove' : 'Add'}} Salad</button>
+<div  class="controls">
+  <button *ngFor='let current of ingredientsList' class="btn-add" (click)='AddIngredient(current)'>Add 1 {{current.Name}}</button>
+  <br />
+  <ng-container *ngFor='let current of ingredientsList'>
+      <button *ngIf='burger.HasIngredient(current.Name)' class="btn-add btn-remove" (click)='RemoveIngredient(current)'>Remove 1 {{current.Name}}</button> 
+  </ng-container>  
 </div>
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredients } from '../models/Enums';
 import { Burger } from '../models/Burguer';
 import { JsonPipe } from '@angular/common';
+import { Ingredient } from '../models/Ingredient';
 
 const localkey = "burger;"
 
@@ -12,7 +12,7 @@ const localkey = "burger;"
 })
 export class BurgerBuilderComponent implements OnInit {
 
-  burger: Burger = null;
+  burger: Burger = new Burger();
 
   constructor() { }
 
@@ -21,8 +21,13 @@ export class BurgerBuilderComponent implements OnInit {
     this.LoadBurgerFromLocalStorage();
   }
 
-  ToogleIngredient(ingredient: Ingredients) {
-    this.burger.ToogleIngredient(ingredient);
+  AddIngredient(ingredient: Ingredient) {
+    this.burger.AddIngredient(ingredient);
+    this.SaveBurgerToLocalStorage();
+  }
+
+  RemoveIngredient(ingredient: Ingredient) {
+    this.burger.RemoveIngredient(ingredient);
     this.SaveBurgerToLocalStorage();
   }
 
@@ -35,7 +40,7 @@ export class BurgerBuilderComponent implements OnInit {
     const storeJson = localStorage.getItem(localkey);
     if(storeJson) {
        const storeData = JSON.parse(storeJson);
-       this.burger = new Burger(storeData._hasMeat, storeData._hasSalad, storeData._hasCheese);
+       if(storeData._ingredients) this.burger = new Burger(storeData._ingredients);
     }
   }
 }

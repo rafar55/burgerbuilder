@@ -8,6 +8,7 @@ import { BurgerBuilderComponent } from './burger-builder/burger-builder.componen
 import { IngredientsControlsComponent } from './ingredients-controls/ingredients-controls.component';
 import { TotalComponent } from './total/total.component';
 import { BurgerComponent } from './burger/burger.component';
+import { IngredientComponent } from './ingredient/ingredient.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BurgerComponent } from './burger/burger.component';
     BurgerBuilderComponent,
     IngredientsControlsComponent,
     TotalComponent,
-    BurgerComponent
+    BurgerComponent,
+    IngredientComponent
   ],
   imports: [
     BrowserModule,

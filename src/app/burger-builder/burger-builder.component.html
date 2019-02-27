@@ -1,4 +1,4 @@
 <burger [burger]='burger'></burger>
-<total [burger]='burger' ></total>
-<ingredients-controls [burger]='burger' (ingredientAdded)="ToogleIngredient($event)"></ingredients-controls>
-  
+<total [burger]='burger'></total>
+<ingredients-controls [burger]='burger' (ingredientAdded)='AddIngredient($event)' 
+(ingredientRemoved)='RemoveIngredient($event)'></ingredients-controls>

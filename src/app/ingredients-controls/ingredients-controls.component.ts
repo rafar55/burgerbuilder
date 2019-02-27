@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { Ingredients } from '../models/Enums';
 import { Burger } from '../models/Burguer';
+import { Ingredient, IngredientsCatalog } from '../models/Ingredient';
 
 
 @Component({
@@ -13,18 +13,24 @@ import { Burger } from '../models/Burguer';
 
 export class IngredientsControlsComponent implements OnInit {
 
-  @Output() ingredientAdded: EventEmitter<Ingredients> = new EventEmitter();
+  @Output() ingredientAdded = new EventEmitter<Ingredient>();
+  @Output() ingredientRemoved = new EventEmitter<Ingredient>();
   @Input() burger: Burger;
-  Ingredients  = Ingredients;
+  ingredientsList = IngredientsCatalog;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  AddIngredient(ingredient: Ingredients) {
+  AddIngredient(ingredient: Ingredient) {
     console.log('Ingrediente agregado: ' + ingredient);
     this.ingredientAdded.emit(ingredient);        
+  }
+
+  RemoveIngredient(ingredient: Ingredient) {
+    console.log('Ingredient se quito:' + ingredient);
+    this.ingredientRemoved.emit(ingredient);    
   }
 
 }

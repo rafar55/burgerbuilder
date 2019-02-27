@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Burger } from '../models/Burguer';
-import { Ingredients } from '../models/Enums';
 
 @Component({
   selector: 'burger',
