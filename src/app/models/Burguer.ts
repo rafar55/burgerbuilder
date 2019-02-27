@@ -4,14 +4,15 @@ export class Burger {
     private _hasMeat: boolean;
     private _hasSalad: boolean;
     private _hasCheese: boolean;
-    private _ingredients: 
+    
 
+    
     constructor(hasMeat: boolean, hasSalad: boolean, hasCheese:boolean) {
         this._hasCheese = hasCheese;
         this._hasMeat = hasMeat;
         this._hasSalad = hasSalad;
     }
-    
+
     get HasMeat() {
         return this._hasMeat;
     }
